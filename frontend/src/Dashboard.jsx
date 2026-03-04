@@ -172,9 +172,10 @@ export default function Dashboard() {
 
       <h2 className="philosophy-heading">My Investing Routine and Philosophy</h2>
       <ul className="philosophy-list">
-        <li>The portfolio is split into smaller Equity/BTC/Gold Portfolios with a dynamic ratio relative to T-Bills</li>
-        <li>Positions last a long-term horizon (&gt;2 years), small tactical rebalancings swing trade sentiment cycles, especially in volatile assets like Bitcoin</li>
-        <li>Disciplined, small weekly DCA rebalancing every Tuesday guided by macroeconomic headwinds, sentiment indicators (fear &amp; greed), technical analysis etc.</li>
+        <li>Positions last a long-term horizon (&gt;2 years).</li>
+        <li>The portfolio is split into smaller Equity/BTC/Gold Portfolios with a dynamic ratio relative to T-Bills.</li>
+        <li>Macroeconomic headwinds, sentiment indicators (fear &amp; greed), technical analysis etc. decide the dynamic ratio through a simple algorithmic system.</li>
+        <li>Disciplined, small, weekly rebalancing executions every Tuesday swing trade sentiment cycles and market volatility, especially in more volatile assets.</li>
       </ul>
     </section>
   )
