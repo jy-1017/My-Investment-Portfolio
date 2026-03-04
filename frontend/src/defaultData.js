@@ -830,42 +830,42 @@ export const DEFAULT_ALLOCATION = [
   {
     "label": "T-Bills",
     "weight": 24.8,
-    "color": "#6b7280"
+    "color": "#8D9196"
   },
   {
     "label": "AI Hyperscalers Stocks",
     "weight": 24,
-    "color": "#6b7280"
+    "color": "#7BD1DD"
   },
   {
     "label": "Bitcoin",
     "weight": 17.5,
-    "color": "#6b7280"
+    "color": "#F99E3F"
   },
   {
     "label": "Japanese Stocks",
     "weight": 10.4,
-    "color": "#6b7280"
+    "color": "#FF3030"
   },
   {
     "label": "Gold ETF",
     "weight": 6.2,
-    "color": "#6b7280"
+    "color": "#F5E162"
   },
   {
     "label": "Healthcare Stocks",
     "weight": 7.7,
-    "color": "#6b7280"
+    "color": "#F184D7"
   },
   {
     "label": "SaaS Stocks",
     "weight": 5.3,
-    "color": "#6b7280"
+    "color": "#62B9D1"
   },
   {
     "label": "Semiconductor Stocks",
     "weight": 2.6,
-    "color": "#6b7280"
+    "color": "#91E98F"
   }
 ]
 
