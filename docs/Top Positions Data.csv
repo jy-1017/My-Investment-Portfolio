@@ -1,10 +1,10 @@
-﻿Company,Ticker,Allocation %
-UnitedHealth Group Inc.,UNH,6.5%
-"Amazon.com, Inc.",AMZN,4.3%
-Alphabet Inc.,GOOGL,3.8%
-ASML Holding N.V.,ASML,2.2%
-"Meta Platforms, Inc.",META,1.9%
-"BigBear.ai Holdings, Inc.",BBAI,1.4%
-"Rubrik, Inc.",RBRK,1.3%
-Adobe Inc.,ADBE,1.1%
-"Duolingo, Inc.",DUOL,0.6%
+Company,Ticker,Allocation %,Category
+UnitedHealth Group Inc.,UNH,6.5%,Healthcare
+"Amazon.com, Inc.",AMZN,4.3%,AI Hyperscaler
+Alphabet Inc.,GOOGL,3.8%,AI Hyperscaler
+ASML Holding N.V.,ASML,2.2%,Semiconductors
+"Meta Platforms, Inc.",META,1.9%,AI Hyperscaler
+"BigBear.ai Holdings, Inc.",BBAI,1.4%,SaaS
+"Rubrik, Inc.",RBRK,1.3%,SaaS
+Adobe Inc.,ADBE,1.1%,SaaS
+"Duolingo, Inc.",DUOL,0.6%,SaaS

@@ -874,54 +874,54 @@ export const DEFAULT_POSITIONS = [
     "company": "UnitedHealth Group Inc.",
     "ticker": "UNH",
     "allocation": 6.5,
-    "category": ""
+    "category": "Healthcare"
   },
   {
     "company": "Amazon.com, Inc.",
     "ticker": "AMZN",
     "allocation": 4.3,
-    "category": ""
+    "category": "AI Hyperscaler"
   },
   {
     "company": "Alphabet Inc.",
     "ticker": "GOOGL",
     "allocation": 3.8,
-    "category": ""
+    "category": "AI Hyperscaler"
   },
   {
     "company": "ASML Holding N.V.",
     "ticker": "ASML",
     "allocation": 2.2,
-    "category": ""
+    "category": "Semiconductors"
   },
   {
     "company": "Meta Platforms, Inc.",
     "ticker": "META",
     "allocation": 1.9,
-    "category": ""
+    "category": "AI Hyperscaler"
   },
   {
     "company": "BigBear.ai Holdings, Inc.",
     "ticker": "BBAI",
     "allocation": 1.4,
-    "category": ""
+    "category": "SaaS"
   },
   {
     "company": "Rubrik, Inc.",
     "ticker": "RBRK",
     "allocation": 1.3,
-    "category": ""
+    "category": "SaaS"
   },
   {
     "company": "Adobe Inc.",
     "ticker": "ADBE",
     "allocation": 1.1,
-    "category": ""
+    "category": "SaaS"
   },
   {
     "company": "Duolingo, Inc.",
     "ticker": "DUOL",
     "allocation": 0.6,
-    "category": ""
+    "category": "SaaS"
   }
 ]
