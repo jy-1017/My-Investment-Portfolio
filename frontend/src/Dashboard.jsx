@@ -54,7 +54,7 @@ export default function Dashboard() {
 
   return (
     <section className="dashboard">
-      <h2>YTD % Performance vs S&P 500 % Change</h2>
+      <h2>Inception to Date % Performance vs S&P 500 % Change</h2>
       <div className="chart-wrap">
         <ResponsiveContainer width="100%" height={360}>
           <LineChart data={chartData} margin={{ top: 12, right: 24, left: 0, bottom: 0 }}>
@@ -92,7 +92,7 @@ export default function Dashboard() {
             <Line
               type="monotone"
               dataKey="ytd"
-              name="YTD % Change"
+              name="Inception to Date % Change"
               stroke="#58a6ff"
               strokeWidth={2}
               dot={false}
