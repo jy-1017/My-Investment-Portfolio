@@ -1,0 +1,13 @@
+# Portfolio Website Architecture
+
+Full spec: **PORTFOLIO_ARCHITECTURE_PROMPT.md** (repo root). Summary:
+
+- **Scope:** Intro page + single dashboard only. No extra pages.
+- **Privacy:** Never show portfolio value, position sizes, or cash. Only show relative performance (%, normalized/indexed series), allocations as %.
+- **Asset types:** US stocks (shares), Bitcoin (BTC), physical gold (g or oz), mutual funds (units); store quantities only; UI shows no notional value.
+- **Charts:** One main chart with YTD and 1Y performance (normalized/base-100 or %), no monetary values in UI.
+- **Backend:** Simple for junior devs — SQLite + thin API, or file-based JSON/CSV, or minimal BaaS. Small API surface; one config/env.
+- **Data entry:** Easy for non-technical users — web forms, optional CSV upload with template, clear validation and feedback. No Git/CLI for routine updates.
+- **Aesthetics:** Tech-savvy, dark mode, professional. Dark theme for charts; high-contrast text; no absolute $ in tooltips/labels.
+
+When adding features, reject anything that exposes portfolio value or adds unnecessary backend complexity.

@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Typography stack — wealth management / fintech (2026)
+   - Body: Inter (400, 500, 600) — readability on dark, neutral, fintech-standard
+   - Headings: Poppins (600–800) — premium institutional feel (GT America fallback)
+   ========================================================================== */
+
+/* Fonts loaded via <link> in index.html (Inter + Poppins) */
+
+:root {
+  /* Font stacks: body = Inter, headings = Poppins (GT America not loaded; Poppins is fallback) */
+  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Poppins', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --accent: #58a6ff;
+  --positive: #3fb950;
+  --negative: #f85149;
+
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Crisp rendering on dark backgrounds */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Headings: Poppins for premium institutional look */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+h1 { font-weight: 700; }
+h2, h3, h4 { font-weight: 700; }
+h5, h6 { font-weight: 600; }
+
+/* Body text, lists, tables, forms, disclaimers use body font (set on :root/body) */
+p, li, td, th, label, input, button, .chart-note, .philosophy-list {
+  font-family: var(--font-body);
+}

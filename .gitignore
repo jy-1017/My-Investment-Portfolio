@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+frontend/dist/
+
+# Local DB (generated; do not commit)
+backend/data/
+*.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# docs deps (keep docs/*.csv and docs/*.js in git)
+docs/node_modules/

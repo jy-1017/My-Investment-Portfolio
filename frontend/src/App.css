@@ -1,0 +1,156 @@
+.app {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: var(--font-body);
+}
+
+.app-footer {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.intro {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Hero / section titles: heading font (Poppins) */
+.intro h1 {
+  font-family: var(--font-heading);
+  font-size: 1.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.intro .tagline,
+.intro .tagline-sub {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.intro .tagline-sub {
+  font-size: 1rem;
+}
+
+.dashboard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.dashboard h2 {
+  font-family: var(--font-heading);
+  font-size: 1.325rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.chart-wrap {
+  min-height: 360px;
+}
+
+.chart-note {
+  font-family: var(--font-body);
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.allocation-heading {
+  font-family: var(--font-heading);
+  font-size: 1.325rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.allocation-wrap {
+  min-height: 320px;
+}
+
+.positions-heading {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.positions-wrap {
+  overflow-x: auto;
+}
+
+/* Table: body font + tabular-nums for aligned numbers/prices */
+.positions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
+}
+
+.positions-table th,
+.positions-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.positions-table th {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.positions-table th:last-child {
+  text-align: right;
+}
+
+.positions-table td:last-child {
+  text-align: right;
+}
+
+.philosophy-heading {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.philosophy-list {
+  font-family: var(--font-body);
+  list-style-position: inside;
+  margin: 0 auto 1.5rem;
+  padding: 0;
+  max-width: 90%;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.philosophy-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Pie chart tooltip text - ensure white on hover */
+.allocation-wrap .recharts-default-tooltip,
+.allocation-wrap .recharts-tooltip-item {
+  color: #fff !important;
+}
