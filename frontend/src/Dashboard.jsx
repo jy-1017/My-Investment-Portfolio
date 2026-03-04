@@ -170,7 +170,7 @@ export default function Dashboard() {
         </table>
       </div>
 
-      <h2 className="philosophy-heading">My Investing Routine and Philosophy</h2>
+      <h2 className="philosophy-heading">My Investing Philosophy and Routine</h2>
       <ul className="philosophy-list">
         <li>Positions last a long-term horizon (&gt;2 years).</li>
         <li>The portfolio is split into smaller Equity/BTC/Gold Portfolios with a dynamic ratio relative to T-Bills.</li>
