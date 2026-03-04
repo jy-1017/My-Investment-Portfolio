@@ -4,9 +4,10 @@ node_modules/
 # Build output
 frontend/dist/
 
-# Local DB (generated; do not commit)
-backend/data/
+# Local DB (generated); we commit portfolio.db so deployed backend has seed data
+backend/data/*
 *.db
+!backend/data/portfolio.db
 
 # Environment
 .env
