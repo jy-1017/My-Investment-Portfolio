@@ -1,6 +1,6 @@
 # Investment Portfolio Dashboard
 
-A wealth management / investment portfolio site with a dark theme: performance chart (YTD vs S&P 500), allocation pie chart, top positions table, and investing philosophy.
+My personal investment portfolio website: performance chart (YTD vs S&P 500), allocation pie chart, top positions table, and investing philosophy.
 
 **This project was created with the assistance of Agentic AI tools.**
 
