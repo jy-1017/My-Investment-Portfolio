@@ -57,6 +57,12 @@ VITE_API_URL=https://your-api.example.com npm run build
 
 (No trailing slash.)
 
+## Render deploy checklist (why CSV data might not show)
+
+- **Redeploy both services** after pushing: use **Manual Deploy → Deploy latest commit** for both the **Static Site** (frontend) and **Web Service** (backend). The site uses CSV data from `frontend/src/defaultData.js` and, when the API is available, from `backend/data/portfolio.db`.
+- **Frontend (Static Site):** Root Directory = `frontend`, Build Command = `npm run build`, Publish Directory = `dist`. Add env **`VITE_API_URL`** = your backend URL (e.g. `https://your-backend.onrender.com`, no trailing slash) so the app calls the API; if the API fails, it falls back to the embedded CSV defaults.
+- **Backend (Web Service):** Root Directory = `backend`, Start Command = `npm start`. The repo includes `backend/data/portfolio.db`; ensure Build Filters / Included Paths don’t exclude `backend/data/` so the DB is in the deploy.
+
 ## Data import (backend)
 
 From `backend/`:

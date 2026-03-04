@@ -12,6 +12,7 @@ import {
   Pie,
   Cell,
 } from 'recharts'
+import { DEFAULT_CHART_DATA, DEFAULT_ALLOCATION, DEFAULT_POSITIONS } from './defaultData'
 
 /* Body font for charts (matches CSS --font-body: Inter stack) */
 const FONT_BODY = "'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif"
@@ -19,36 +20,23 @@ const FONT_BODY = "'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif"
 /* API base URL: set VITE_API_URL in build env for production (e.g. https://your-api.railway.app). Leave unset for dev (Vite proxy) or same-origin deploy. */
 const API_BASE = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '')
 
-const DEFAULT_ALLOCATION = [
-  { label: 'Equities', weight: 45.3, color: '#3b82f6' },
-  { label: 'Bonds', weight: 30, color: '#22c55e' },
-  { label: 'Cash', weight: 10, color: '#eab308' },
-  { label: 'Alternatives', weight: 14.7, color: '#a855f7' },
-]
-
-const DEFAULT_POSITIONS = [
-  { company: 'UnitedHealth Group Inc.', ticker: 'UNH', allocation: 6.4, category: 'Healthcare' },
-  { company: 'Amazon.com, Inc.', ticker: 'AMZN', allocation: 4.2, category: 'AI Hyperscaler' },
-  { company: 'Alphabet Inc.', ticker: 'GOOGL', allocation: 3.7, category: 'AI Hyperscaler' },
-]
-
 export default function Dashboard() {
-  const [chartData, setChartData] = useState([])
+  const [chartData, setChartData] = useState(DEFAULT_CHART_DATA)
   const [allocationSlices, setAllocationSlices] = useState(DEFAULT_ALLOCATION)
   const [topPositions, setTopPositions] = useState(DEFAULT_POSITIONS)
 
   useEffect(() => {
     fetch(`${API_BASE}/api/performance`)
       .then((res) => res.json())
-      .then((data) => setChartData(data.chartData || []))
-      .catch(() => setChartData(sampleChartData()))
+      .then((data) => setChartData(data.chartData?.length ? data.chartData : DEFAULT_CHART_DATA))
+      .catch(() => setChartData(DEFAULT_CHART_DATA))
   }, [])
 
   useEffect(() => {
     fetch(`${API_BASE}/api/allocation`)
       .then((res) => res.json())
       .then((data) => setAllocationSlices(data.slices?.length ? data.slices : DEFAULT_ALLOCATION))
-      .catch(() => {})
+      .catch(() => setAllocationSlices(DEFAULT_ALLOCATION))
   }, [])
 
   useEffect(() => {
@@ -61,7 +49,7 @@ export default function Dashboard() {
             : DEFAULT_POSITIONS
         setTopPositions(next)
       })
-      .catch(() => {})
+      .catch(() => setTopPositions(DEFAULT_POSITIONS))
   }, [])
 
   return (
@@ -192,18 +180,3 @@ export default function Dashboard() {
   )
 }
 
-function sampleChartData() {
-  const points = []
-  const now = new Date()
-  for (let i = 30; i >= 0; i--) {
-    const d = new Date(now)
-    d.setDate(d.getDate() - i)
-    const dateStr = d.toISOString().slice(0, 10)
-    points.push({
-      date: dateStr,
-      ytd: 100 + (30 - i) * 0.5 + Math.random() * 1,
-      sp500: null,
-    })
-  }
-  return points
-}
