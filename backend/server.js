@@ -189,10 +189,22 @@ app.post('/api/performance', (req, res) => {
     return res.status(400).json({ error: 'date is required' })
   }
   try {
-    db.run(
-      'INSERT INTO performance (date, ytd, one_year, sp500) VALUES (?, ?, ?, ?)',
-      [date, ytd ?? null, oneYear ?? null, sp500 ?? null]
-    )
+    // Avoid duplicates: update existing row for this date, otherwise insert
+    const stmt = db.prepare('SELECT 1 FROM performance WHERE date = ?')
+    stmt.bind([date])
+    const exists = stmt.step()
+    stmt.free()
+    if (exists) {
+      db.run(
+        'UPDATE performance SET ytd = ?, one_year = ?, sp500 = ? WHERE date = ?',
+        [ytd ?? null, oneYear ?? null, sp500 ?? null, date]
+      )
+    } else {
+      db.run(
+        'INSERT INTO performance (date, ytd, one_year, sp500) VALUES (?, ?, ?, ?)',
+        [date, ytd ?? null, oneYear ?? null, sp500 ?? null]
+      )
+    }
     saveDb()
     res.json({ ok: true })
   } catch (e) {
