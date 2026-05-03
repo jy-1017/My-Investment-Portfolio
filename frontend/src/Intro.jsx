@@ -6,7 +6,7 @@ export default function Intro() {
         My investment portfolio at a glance since 22nd Sept 2025, by Jeffrey Yeung
       </p>
       <p className="tagline tagline-sub">
-        Last Updated 16th Mar 2026
+        Last Updated 3rd May 2026
       </p>
     </section>
   )
