@@ -23,3 +23,6 @@ Thumbs.db
 
 # docs deps (keep docs/*.csv and docs/*.js in git)
 docs/node_modules/
+
+# Session summary (local context for next session, not for repo)
+SESSION_SUMMARY.md
